@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div class="row my-3">
+    <div class="col-12">
+      <h4>All Orders</h4>
+      <hr class="border-primary" />
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-12">
+      <input
+        class="form-control w-25"
+        type="search"
+        placeholder="Search by party name...."
+        aria-label="Search"
+        [formControl]="searchControl"
+      />
+    </div>
+  </div>
+  <app-common-list
+    [columnDef]="columnDef"
+    [columnData]="allOrders()"
+    (onSort)="onSort($event)"
+  ></app-common-list>
+
+  @if (pagination.totalProducts) {
+  <ngb-pagination
+    class="d-flex justify-content-center my-5"
+    [collectionSize]="pagination.totalProducts"
+    [(page)]="pagination.currentPage"
+    [pageSize]="pagination.limit"
+    [maxSize]="5"
+    [rotate]="true"
+    [boundaryLinks]="true"
+    (pageChange)="onPageChange($event)"
+  />
+  }
+</div>
+<ng-template #actionItem let-value="rowData">
+  <button
+    class="btn btn-sm btn-outline-danger me-2"
+    (click)="deleteOrder(value.orderNo)"
+  >
+    Delete
+  </button>
+  <a
+    class="btn btn-sm btn-outline-danger me-2"
+    [routerLink]="['./', value?.orderNo]"
+  >
+    Edit
+  </a>
+  <a
+    class="btn btn-sm btn-outline-danger"
+    [routerLink]="['./products', value?.orderNo]"
+  >
+    Add Products
+  </a>
+</ng-template>
+<ng-template #priceFormate let-value="rowData" let-columnDef="columnDef">
+  {{ value[columnDef.labelKey] | currency : currency }}
+</ng-template>
+
+<ng-template #dateFormate let-value="rowData" let-columnDef="columnDef">
+  {{ value[columnDef.labelKey] | date : "short" }}
+</ng-template>
+
+<ng-template #priorityCol let-value="rowData" let-columnDef="columnDef">
+  <span
+    [ngClass]="{
+      'text-danger': value[columnDef.labelKey] === 'High',
+      'text-warning': value[columnDef.labelKey] === 'Medium',
+      'text-success': value[columnDef.labelKey] === 'Low'
+    }"
+  >
+    {{ value[columnDef.labelKey] }}
+  </span>
+</ng-template>

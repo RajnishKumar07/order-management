@@ -1,0 +1,173 @@
+<div class="container">
+  <div class="row my-3">
+    <div class="col-12">
+      <h4>{{ orderNo() ? "Edit Order" : "Add Order" }}</h4>
+      <hr class="border-primary" />
+    </div>
+  </div>
+  <form [formGroup]="orderForm" (ngSubmit)="submitOrder()" class="h-100">
+    <div class="row gy-3">
+      <!-- Product Code -->
+      <div class="col-6">
+        <label for="pCode" class="required">Product Code</label>
+        <input
+          type="text"
+          id="pCode"
+          class="form-control form-control-lg"
+          placeholder="Product Code"
+          formControlName="pCode"
+          appAlphaNumerics
+        />
+        @if(isSubmitted &&orderForm.controls['pCode'].errors&&
+        orderForm.controls['pCode'].errors['required']){
+        <label for="" class="text-danger">
+          Please enter value for Product Code.
+        </label>
+        }
+      </div>
+      <!-- Party Name -->
+      <div class="col-6">
+        <label for="partyName" class="required">Party Name</label>
+        <input
+          type="text"
+          id="partyName"
+          class="form-control form-control-lg"
+          placeholder="Party Name"
+          formControlName="partyName"
+          appAlphaNumerics
+        />
+        @if(isSubmitted &&orderForm.controls['partyName'].errors&&
+        orderForm.controls['partyName'].errors['required']){
+        <label for="" class="text-danger">
+          Please enter value for Party Name.
+        </label>
+        }
+      </div>
+      <!-- City -->
+      <div class="col-6">
+        <label for="city" class="required">City</label>
+        <input
+          type="text"
+          id="city"
+          class="form-control form-control-lg"
+          placeholder="City"
+          formControlName="city"
+          appAlphaNumerics
+        />
+        @if(isSubmitted &&orderForm.controls['city'].errors&&
+        orderForm.controls['city'].errors['required']){
+        <label for="" class="text-danger"> Please enter value for City. </label>
+        }
+      </div>
+      <!-- Amount -->
+      <!-- <div class="col-6">
+        <label for="amount" class="required">Amount</label>
+        <input
+          type="text"
+          id="amount"
+          class="form-control form-control-lg"
+          placeholder="Amount"
+          formControlName="amount"
+          appAlphaNumerics
+        />
+        @if(isSubmitted &&orderForm.controls['amount'].errors&&
+        orderForm.controls['amount'].errors['required']){
+        <label for="" class="text-danger">
+          Please enter value for Amount.
+        </label>
+        }
+      </div> -->
+      <!-- Order By -->
+      <div class="col-6">
+        <label for="orderBy" class="required">Order By</label>
+        <ng-select
+          [items]="orderByOptions"
+          formControlName="orderBy"
+          placeholder="Order By"
+          bindLabel="label"
+          bindValue="value"
+          [clearable]="false"
+        >
+        </ng-select>
+        @if(isSubmitted &&orderForm.controls['orderBy'].errors&&
+        orderForm.controls['orderBy'].errors['required']){
+        <label for="" class="text-danger">
+          Please enter value for Order By.
+        </label>
+        }
+      </div>
+      <!-- Priority -->
+      <div class="col-6">
+        <label for="priority" class="required">Priority</label>
+        <ng-select
+          [items]="priorities"
+          formControlName="priority"
+          placeholder="Priority"
+          bindLabel="label"
+          bindValue="value"
+          [clearable]="false"
+        >
+        </ng-select>
+        @if(isSubmitted &&orderForm.controls['priority'].errors&&
+        orderForm.controls['priority'].errors['required']){
+        <label for="" class="text-danger">
+          Please enter value for Priority.
+        </label>
+        }
+      </div>
+      <!-- Delivery Mode -->
+      <div class="col-6">
+        <label for="deliveryMode" class="required">Delivery Mode</label>
+        <ng-select
+          [items]="deliveryModes"
+          formControlName="deliveryMode"
+          placeholder="Delivery Mode"
+          bindLabel="label"
+          bindValue="value"
+          [clearable]="false"
+        >
+        </ng-select>
+        @if(isSubmitted &&orderForm.controls['deliveryMode'].errors&&
+        orderForm.controls['deliveryMode'].errors['required']){
+        <label for="" class="text-danger">
+          Please enter value for Delivery Mode.
+        </label>
+        }
+      </div>
+      <!-- Status -->
+      <div class="col-6">
+        <label for="status" class="required">Status</label>
+        <ng-select
+          [items]="statuses"
+          formControlName="status"
+          placeholder="Status"
+          bindLabel="label"
+          bindValue="value"
+          [clearable]="false"
+        >
+        </ng-select>
+        @if(isSubmitted &&orderForm.controls['status'].errors&&
+        orderForm.controls['status'].errors['required']){
+        <label for="" class="text-danger">
+          Please enter value for Status.
+        </label>
+        }
+      </div>
+    </div>
+    <!-- Action Button -->
+    <div class="col-12">
+      <div class="my-4 row justify-content-center">
+        <div class="col-2">
+          <a class="btn btn-outline-secondary w-100" [routerLink]="['../']">
+            Cancel
+          </a>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-primary text-white w-100" type="submit">
+            {{ orderNo() ? "Update" : "Create" }} Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

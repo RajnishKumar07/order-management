@@ -1,0 +1,69 @@
+<table class="table table-striped">
+  <thead class="table-primary">
+    <tr>
+      @for (col of columnDef(); track $index) {
+
+      <th scope="col" [class]="col?.columnClass">
+        @if(col.enableSort){
+
+        <span role="button" (click)="onSortFn(col.labelKey)">
+          {{ col?.label }}
+          <ng-container
+            *ngTemplateOutlet="sortTemplate; context: { columnDef: col }"
+          ></ng-container>
+        </span>
+        }@else {
+        {{ col?.label }}
+        }
+      </th>
+
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @if ( columnData()?.length) { @for (colData of columnData(); track $index) {
+    <tr>
+      @for (col of columnDef(); track $index) { @if (col.templateRef) {
+      <td>
+        <ng-container
+          *ngTemplateOutlet="
+            col.templateRef;
+            context: { rowData: colData, columnDef: col }
+          "
+        ></ng-container>
+      </td>
+      }@else{
+      <td>
+        {{ col?.isSerialNo ? $index + 1 : colData[col.labelKey] }}
+      </td>
+      } }
+    </tr>
+    }}@else {
+    <tr>
+      <td colspan="20">
+        <div
+          class="d-flex w-100 justify-content-ceter flex-column align-items-center gap-4"
+        >
+          <img [src]="noDataImageUrl" alt="no-data" />
+          <div class="fs-3 text-muted">No Data to display</div>
+        </div>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+<ng-template #sortTemplate let-columnDef="columnDef">
+  @if(columnDef?.labelKey===sortControl.value?.fieldName){ @switch
+  (sortControl.value?.value) { @case ('asc') {
+  <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+  } @case ('desc') {
+  <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+  } @default {
+  <i class="fa fa-sort" aria-hidden="true"></i>
+
+  } } }@else {
+
+  <i class="fa fa-sort" aria-hidden="true"></i>
+  }
+</ng-template>

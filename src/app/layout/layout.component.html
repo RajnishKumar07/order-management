@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-primary fixed-top text-white">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" routerLink="/">{{ brandText }}</a>
+    @if(enableSearch){
+    <input
+      class="form-control ms-4 w-25"
+      type="search"
+      placeholder="Search by Employee name...."
+      aria-label="Search"
+      [formControl]="searchControl"
+    />
+    }
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav">
+        @for (menu of menus; track menu) {
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="menu.routerLink"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ menu.label }}</a
+          >
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="content-wrapper">
+  <router-outlet> </router-outlet>
+</div>

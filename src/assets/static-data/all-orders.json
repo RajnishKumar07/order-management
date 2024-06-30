@@ -1,0 +1,391 @@
+{
+  "status": "success",
+  "message": "Order list found successfully!",
+  "data": [
+    {
+      "orderNo": "MRR79922",
+      "dateAndTime": "2020-05-29T18:31",
+      "pCode": "KAR03",
+      "partyName": "KARE MEDICINES",
+      "city": "Surat",
+      "amount": 1230.2,
+      "orderBy": "SalesMan",
+      "priority": "Low",
+      "deliveryMode": "Deliver to Store",
+      "status": "In Process",
+      "products": [
+        {
+          "pCode": "1927",
+          "productName": "IBUGESIC PLUS SYRUP-2",
+          "make": "Cipla",
+          "pack": "1x100",
+          "unit": "ML",
+          "qty": 5,
+          "ptr": 90.0,
+          "value": 450.0,
+          "id": "prod1"
+        },
+        {
+          "pCode": "2997",
+          "productName": "VALANCE 500MG SYP",
+          "make": "Cipla",
+          "pack": "1x200",
+          "unit": "ML",
+          "qty": 1,
+          "ptr": 150.0,
+          "value": 150.0,
+          "id": "prod2"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79923",
+      "dateAndTime": "2020-05-29T18:24",
+      "pCode": "500",
+      "partyName": "VISHAL MEDICAL",
+      "city": "Ahmedabad",
+      "amount": 4565.0,
+      "orderBy": "Party Self",
+      "priority": "High",
+      "deliveryMode": "Pickup from Counter",
+      "status": "Invoiced",
+      "products": [
+        {
+          "pCode": "355",
+          "productName": "TELMIRIDE AM TAB",
+          "make": "Torrent",
+          "pack": "1x10",
+          "unit": "TAB",
+          "qty": 10,
+          "ptr": 28.9,
+          "value": 289.0,
+          "id": "prod3"
+        },
+        {
+          "pCode": "356",
+          "productName": "TORVASON 10 TAB",
+          "make": "Unison",
+          "pack": "1x14",
+          "unit": "TAB",
+          "qty": 10,
+          "ptr": 14.5,
+          "value": 145.0,
+          "id": "prod4"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79924",
+      "dateAndTime": "2020-05-29T17:37",
+      "pCode": "REF01",
+      "partyName": "REFRESH PHARMACY",
+      "city": "Surat",
+      "amount": 9500.0,
+      "orderBy": "Party Self",
+      "priority": "High",
+      "deliveryMode": "Deliver to Store",
+      "status": "Invoiced",
+      "products": [
+        {
+          "pCode": "5795",
+          "productName": "AKILOS SP TAB",
+          "make": "Unison",
+          "pack": "1x10",
+          "unit": "TAB",
+          "qty": 3,
+          "ptr": 37.5,
+          "value": 112.5,
+          "id": "prod5"
+        },
+        {
+          "pCode": "6230",
+          "productName": "TAZLOC BETA 25 TAB",
+          "make": "Cadila",
+          "pack": "1x14",
+          "unit": "TAB",
+          "qty": 3,
+          "ptr": 56.78,
+          "value": 170.34,
+          "id": "prod6"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79925",
+      "dateAndTime": "2020-05-29T16:54",
+      "pCode": "AKS02",
+      "partyName": "AKSHAR MEDICAL CENTER",
+      "city": "Ahmedabad",
+      "amount": 1858.9,
+      "orderBy": "SalesMan",
+      "priority": "Medium",
+      "deliveryMode": "Deliver to Store",
+      "status": "Invoiced",
+      "products": [
+        {
+          "pCode": "1927",
+          "productName": "IBUGESIC PLUS SYRUP-2",
+          "make": "Cipla",
+          "pack": "1x100",
+          "unit": "ML",
+          "qty": 5,
+          "ptr": 90.0,
+          "value": 450.0,
+          "id": "prod7"
+        },
+        {
+          "pCode": "2997",
+          "productName": "VALANCE 500MG SYP",
+          "make": "Cipla",
+          "pack": "1x200",
+          "unit": "ML",
+          "qty": 1,
+          "ptr": 150.0,
+          "value": 150.0,
+          "id": "prod8"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79926",
+      "dateAndTime": "2020-05-29T16:44",
+      "pCode": "SH133",
+      "partyName": "SHREE HARI MEDICAL STORE",
+      "city": "Surat",
+      "amount": 1560.0,
+      "orderBy": "SalesMan",
+      "priority": "Medium",
+      "deliveryMode": "Deliver to Store",
+      "status": "Draft",
+      "products": [
+        {
+          "pCode": "355",
+          "productName": "TELMIRIDE AM TAB",
+          "make": "Torrent",
+          "pack": "1x10",
+          "unit": "TAB",
+          "qty": 10,
+          "ptr": 28.9,
+          "value": 289.0,
+          "id": "prod9"
+        },
+        {
+          "pCode": "356",
+          "productName": "TORVASON 10 TAB",
+          "make": "Unison",
+          "pack": "1x14",
+          "unit": "TAB",
+          "qty": 10,
+          "ptr": 14.5,
+          "value": 145.0,
+          "id": "prod10"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79927",
+      "dateAndTime": "2020-05-29T16:40",
+      "pCode": "NAV21",
+      "partyName": "NAVSARI CHEMIST",
+      "city": "Ahmedabad",
+      "amount": 8541.0,
+      "orderBy": "SalesMan",
+      "priority": "Medium",
+      "deliveryMode": "Deliver to Store",
+      "status": "Invoiced",
+      "products": [
+        {
+          "pCode": "5795",
+          "productName": "AKILOS SP TAB",
+          "make": "Unison",
+          "pack": "1x10",
+          "unit": "TAB",
+          "qty": 3,
+          "ptr": 37.5,
+          "value": 112.5,
+          "id": "prod11"
+        },
+        {
+          "pCode": "6230",
+          "productName": "TAZLOC BETA 25 TAB",
+          "make": "Cadila",
+          "pack": "1x14",
+          "unit": "TAB",
+          "qty": 3,
+          "ptr": 56.78,
+          "value": 170.34,
+          "id": "prod12"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79928",
+      "dateAndTime": "2020-05-29T15:30",
+      "pCode": "MDX01",
+      "partyName": "MEDIX PHARMA",
+      "city": "Mumbai",
+      "amount": 6200.5,
+      "orderBy": "Party Self",
+      "priority": "High",
+      "deliveryMode": "Home Delivery",
+      "status": "Completed",
+      "products": [
+        {
+          "pCode": "355",
+          "productName": "TELMIRIDE AM TAB",
+          "make": "Torrent",
+          "pack": "1x10",
+          "unit": "TAB",
+          "qty": 10,
+          "ptr": 28.9,
+          "value": 289.0,
+          "id": "prod13"
+        },
+        {
+          "pCode": "2997",
+          "productName": "VALANCE 500MG SYP",
+          "make": "Cipla",
+          "pack": "1x200",
+          "unit": "ML",
+          "qty": 1,
+          "ptr": 150.0,
+          "value": 150.0,
+          "id": "prod14"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79929",
+      "dateAndTime": "2020-05-29T14:20",
+      "pCode": "HLT15",
+      "partyName": "HEALTHY LIFE PHARMACY",
+      "city": "Delhi",
+      "amount": 3700.0,
+      "orderBy": "SalesMan",
+      "priority": "Medium",
+      "deliveryMode": "Deliver to Store",
+      "status": "In Process",
+      "products": [
+        {
+          "pCode": "1927",
+          "productName": "IBUGESIC PLUS SYRUP-2",
+          "make": "Cipla",
+          "pack": "1x100",
+          "unit": "ML",
+          "qty": 5,
+          "ptr": 90.0,
+          "value": 450.0,
+          "id": "prod15"
+        },
+        {
+          "pCode": "6230",
+          "productName": "TAZLOC BETA 25 TAB",
+          "make": "Cadila",
+          "pack": "1x14",
+          "unit": "TAB",
+          "qty": 3,
+          "ptr": 56.78,
+          "value": 170.34,
+          "id": "prod16"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79930",
+      "dateAndTime": "2020-05-29T12:15",
+      "pCode": "SDP08",
+      "partyName": "SUDARSHAN PHARMACY",
+      "city": "Pune",
+      "amount": 5500.0,
+      "orderBy": "SalesMan",
+      "priority": "Medium",
+      "deliveryMode": "Deliver to Store",
+      "status": "In Process",
+      "products": [
+        {
+          "pCode": "355",
+          "productName": "TELMIRIDE AM TAB",
+          "make": "Torrent",
+          "pack": "1x10",
+          "unit": "TAB",
+          "qty": 10,
+          "ptr": 28.9,
+          "value": 289.0,
+          "id": "prod17"
+        },
+        {
+          "pCode": "356",
+          "productName": "TORVASON 10 TAB",
+          "make": "Unison",
+          "pack": "1x14",
+          "unit": "TAB",
+          "qty": 10,
+          "ptr": 14.5,
+          "value": 145.0,
+          "id": "prod18"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79931",
+      "dateAndTime": "2020-05-29T10:55",
+      "pCode": "MDT17",
+      "partyName": "MEDITECH PHARMA",
+      "city": "Mumbai",
+      "amount": 4300.0,
+      "orderBy": "Party Self",
+      "priority": "Medium",
+      "deliveryMode": "Deliver to Store",
+      "status": "Draft",
+      "products": [
+        {
+          "pCode": "5795",
+          "productName": "AKILOS SP TAB",
+          "make": "Unison",
+          "pack": "1x10",
+          "unit": "TAB",
+          "qty": 3,
+          "ptr": 37.5,
+          "value": 112.5,
+          "id": "prod19"
+        },
+        {
+          "pCode": "6230",
+          "productName": "TAZLOC BETA 25 TAB",
+          "make": "Cadila",
+          "pack": "1x14",
+          "unit": "TAB",
+          "qty": 3,
+          "ptr": 56.78,
+          "value": 170.34,
+          "id": "prod20"
+        }
+      ]
+    },
+    {
+      "orderNo": "MRR79932",
+      "dateAndTime": "2020-05-29T09:45",
+      "pCode": "FLR12",
+      "partyName": "FLORA MEDICAL STORE",
+      "city": "Pune",
+      "amount": 2100.0,
+      "orderBy": "SalesMan",
+      "priority": "Low",
+      "deliveryMode": "Deliver to Store",
+      "status": "In Process",
+      "products": [
+        {
+          "pCode": "1927",
+          "productName": "IBUGESIC PLUS SYRUP-2",
+          "make": "Cipla",
+          "pack": "1x100",
+          "unit": "ML",
+          "qty": 5,
+          "ptr": 90.0,
+          "value": 450.0,
+          "id": "prod21"
+        }
+      ]
+    }
+  ]
+}
